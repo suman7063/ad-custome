@@ -1,35 +1,53 @@
-import { useEffect, useRef } from "react";
-import {
-  Chart,
-  ChartType,
-  ChartData,
-  ChartOptions,
-  registerables,
-} from "chart.js";
+import React, {useRef, useEffect } from "react";
+import { Chart, registerables } from "chart.js";
 
-interface MetricChartProps {
-  type: ChartType;
-  data: ChartData;
-  options?: ChartOptions;
-}
+import { useSelectedMetrics } from "../contextApi/SelectedMetricsContext";
 
 Chart.register(...registerables);
 
-const MetricChart = ({ type, data, options }: any) => {
-  const chartRef = useRef<HTMLCanvasElement>(null);
-  const chartInstance = useRef<Chart | null>(null);
+const MetricChart = ({type}:any) => {
+  const { selectedMetrics } = useSelectedMetrics();
+  const chartRef = useRef<Chart | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    if (chartRef.current) {
-      chartInstance.current?.destroy();
-      chartInstance.current = new Chart(chartRef.current, {
-        type,
-        data,
-        options,
-      });
-    }
-  }, [type, data, options]);
+    if (canvasRef.current) {
+      const ctx = canvasRef.current.getContext("2d");
+      if (ctx) {
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "#5e42a6");
+        gradient.addColorStop(1, "#b74e91");
 
-  return <canvas ref={chartRef} />;
+        const chartData = {
+          labels: selectedMetrics,
+          datasets: [
+            {
+              label: "Ad Metrics",
+              data: selectedMetrics.map(() => Math.floor(Math.random() * 100)),
+              backgroundColor: gradient,
+              borderColor: "[#908f90]",
+              borderWidth: 1,
+            },
+          ],
+        };
+        if (chartRef.current) {
+          chartRef.current.destroy();
+        }
+
+        // Create new chart instance
+        chartRef.current = new Chart(ctx, {
+          type: type,
+          data: chartData,
+        });
+      }
+    }
+  }, [type, selectedMetrics]);
+
+  return (
+      <div className="mt-4">
+        <canvas ref={canvasRef} />
+      </div>
+  );
 };
+
 export default MetricChart;

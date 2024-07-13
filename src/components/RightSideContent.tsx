@@ -1,30 +1,12 @@
 import React, { useState } from "react";
 import { ChartType } from "chart.js";
 import MetricChart from "./MetricChart";
-import { useSelectedMetrics } from "../contextApi/SelectedMetricsContext";
+
 import CustomeDropdown from "./CustomeDropdown";
 const RightSideContent = () => {
-  const { selectedMetrics } = useSelectedMetrics();
-  const [chartType, setChartType] = useState<ChartType>("bar");
-  const chartData = {
-    labels: selectedMetrics,
-    datasets: [
-      {
-        label: "Ad Metrics",
-        data: selectedMetrics.map(() => Math.floor(Math.random() * 100)),
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
-      },
-    ],
-  };
 
-  const chartOptions =
-    chartType === "bar"
-      ? {
-          indexAxis: "y",
-        }
-      : {};
+  const [chartType, setChartType] = useState<ChartType>("bar");
+  
   return (
     <>
       {" "}
@@ -60,7 +42,7 @@ const RightSideContent = () => {
       ))}
     </div>
   </div> */}
-        <MetricChart type={chartType} data={chartData} options={chartOptions} />
+        <MetricChart type={chartType}  />
       </div>
     </>
   );
