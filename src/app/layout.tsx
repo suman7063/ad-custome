@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}> {children}</body>
     </html>
   );
 }
