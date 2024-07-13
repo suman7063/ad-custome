@@ -28,7 +28,7 @@ const DropArea = ({ onDrop }: DropAreaProps) => {
   return (
     <div
       ref={ref}
-      className={`w-full h-64 p-4 border-dashed border-2 ${
+      className={`w-full h-64 p-4 border-dashed border-2 border-[#b74e91] text-[#b74e91] ${
         isOver ? "border-blue-500" : "border-gray-300"
       }`}
     >

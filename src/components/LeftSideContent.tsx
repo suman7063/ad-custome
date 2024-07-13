@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import DropArea from "./DropArea";
 import DraggableMetric from "./DraggableMetric";
-
+import { useSelectedMetrics } from "../contextApi/SelectedMetricsContext";
 const metrics = ["Impressions", "CTR", "CPA", "Conversions", "Cost"];
 const LeftSideContent = () => {
-  const [selectedMetrics, setSelectedMetrics] = useState<string[]>([]);
+  const { addMetric } = useSelectedMetrics();
   const handleDrop = (item: { name: string }) => {
-    setSelectedMetrics((prevMetrics) => [...prevMetrics, item.name]);
+    addMetric(item.name);
   };
   return (
     <>

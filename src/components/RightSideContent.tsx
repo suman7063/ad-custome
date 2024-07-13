@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { ChartType } from "chart.js";
 import MetricChart from "./MetricChart";
+import { useSelectedMetrics } from "../contextApi/SelectedMetricsContext";
+import CustomeDropdown from "./CustomeDropdown";
 const RightSideContent = () => {
+  const { selectedMetrics } = useSelectedMetrics();
   const [chartType, setChartType] = useState<ChartType>("bar");
-  const [selectedMetrics, setSelectedMetrics] = useState<string[]>([]);
   const chartData = {
     labels: selectedMetrics,
     datasets: [
@@ -28,20 +30,21 @@ const RightSideContent = () => {
       {" "}
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">Ad Campaign Report Builder</h1>
-        <div>
-          <label htmlFor="chartType" className="mr-2">
+        <div className="flex w-[400px]">
+          <label htmlFor="chartType" className="mr-2 w-[140px]">
             Chart Type:
           </label>
-          <select
-            id="chartType"
-            value={chartType}
-            onChange={(e) => setChartType(e.target.value as ChartType)}
-            className="w-[200px] h-[40px] rounded "
-          >
-            <option value="bar">Bar</option>
-            <option value="line">Line</option>
-            <option value="pie">Pie</option>
-          </select>
+          <CustomeDropdown
+            option={[
+              { id: "1", category: "bar" },
+              { id: "2", category: "line" },
+              { id: "2", category: "pie" },
+            ]}
+            onOptionChange={(value: any) => {
+              setChartType(value);
+            }}
+            selectedCategory={chartType}
+          />
         </div>
       </div>
       <div className="mt-4">
