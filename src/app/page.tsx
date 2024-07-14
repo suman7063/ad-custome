@@ -4,9 +4,13 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 
 import LeftSideContent from "../components/LeftSideContent";
 import RightSideContent from "../components/RightSideContent";
-import { SelectedMetricsProvider } from "../contextApi/SelectedMetricsContext";
+import {
+  SelectedMetricsProvider,
+  useSelectedMetrics,
+} from "../contextApi/SelectedMetricsContext";
 
 const Home = () => {
+
   return (
     <DndProvider backend={HTML5Backend}>
       <SelectedMetricsProvider>
@@ -14,9 +18,11 @@ const Home = () => {
           <div className="w-1/4 p-4  text-white h-screen">
             <LeftSideContent />
           </div>
-          <div className="w-3/4 p-4 bg-[#9882D4]">
-            <RightSideContent />
-          </div>
+          
+              <div className="w-3/4 p-4 bg-[#f6f5f8]" >
+                <RightSideContent/>
+              </div>
+          
         </div>
       </SelectedMetricsProvider>
     </DndProvider>

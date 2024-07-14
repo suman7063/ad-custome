@@ -16,9 +16,6 @@ const LeftSideContent = () => {
           <DraggableMetric key={metric} name={metric} />
         ))}
       </aside>
-      <div className="mt-16">
-        <DropArea onDrop={handleDrop} />
-      </div>
     </>
   );
 };
