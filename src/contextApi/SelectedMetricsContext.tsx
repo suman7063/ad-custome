@@ -29,7 +29,7 @@ export const SelectedMetricsProvider: React.FC<{ children: ReactNode }> = ({
 
   const removeMetric = (metric: string) => {
     setSelectedMetrics((prevMetrics) =>
-      prevMetrics.filter((m) => m !== metric)
+      prevMetrics.filter((item) => item !== metric)
     );
   };
 

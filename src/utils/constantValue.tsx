@@ -1,11 +1,12 @@
 export const optionForGraph = [
   { id: "1", category: "bar" },
-  { id: "2", category: "line" },
-  { id: "3", category: "pie" },
+  { id: "2", category: "line" }
 ];
 
+export const metrics = ["Impressions", "CTR", "CPA"];
+
 export const byChartTypeData = [
-    { id: "Total Impressions", category: "Total Impressions" },
+    { id: "Total", category: "Total" },
     { id: "Device Breakdown", category: "Device Breakdown" }
   ];
 

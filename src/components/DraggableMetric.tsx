@@ -6,12 +6,6 @@ interface DraggableMetricProps {
   name: string;
 }
 
-// Define the type of item being dragged
-interface DragItem {
-  type: string;
-  name: string;
-}
-
 const DraggableMetric = ({ name }: DraggableMetricProps) => {
   const ref = useRef<HTMLDivElement>(null);
 

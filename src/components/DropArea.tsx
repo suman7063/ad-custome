@@ -1,14 +1,15 @@
-import { useDrop, DropTargetMonitor } from "react-dnd";
-
-import { useRef, useEffect, RefObject,useState } from "react";
+import { useDrop } from "react-dnd";
+import { useRef, useEffect } from "react";
 import { useSelectedMetrics } from "../contextApi/SelectedMetricsContext";
 import MetricChart from "./MetricChart";
 
 interface DropAreaProps {
   onDrop: (item: { name: string }) => void;
+  selectDate:{from:string;to:string}
+  apply:boolean
 }
 
-const DropArea = ({ onDrop }: DropAreaProps) => {
+const DropArea = ({ onDrop,selectDate,apply }: DropAreaProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { selectedMetrics,removeMetric } = useSelectedMetrics();
@@ -21,9 +22,8 @@ const DropArea = ({ onDrop }: DropAreaProps) => {
       isOver: !!monitor.isOver(),
     }),
   });
-  const deleteAddedMatric = (item:string) => {
-    removeMetric(item);
-  };
+
+ 
   // Attach the drop target ref to the div ref
   useEffect(() => {
     if (ref.current) {
@@ -34,16 +34,16 @@ const DropArea = ({ onDrop }: DropAreaProps) => {
   return (
     <div
       ref={ref}
-      className={`w-full p-4 border-dashed border-2 border-[#b74e91] text-[#b74e91] text-center ${
-        isOver ? "border-blue-500" : "border-gray-300"
+      className={`w-full p-4 border-dashed border-2   text-center ${
+        isOver ? "border-lime-500" : "border-[#b74e91]"
       }`}
     >
       <div>
-      {isOver ? "Release to drop" : "Drag a metric here"}
+      {isOver ? <div className="text-xs text-lime-500">Release to drop</div> : <div className="text-[#b74e91]">Drag a metric here</div>}
       </div>
-    
+      
        {selectedMetrics.map((item)=>{return( <div className="mt-4">
-        <MetricChart selectedMetrics={item}/>
+        <MetricChart selectedMetrics={item} selectDate={selectDate} apply={apply}/>
       </div>)})}
     </div>
   );

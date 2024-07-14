@@ -5,54 +5,103 @@ import { byChartTypeData } from "../utils/constantValue";
 import ColorDropdown from "./ColorDropdown";
 import CustomeDropdown from "./CustomeDropdown";
 import { optionForGraph } from "../utils/constantValue";
+import { useSelectedMetrics } from "../contextApi/SelectedMetricsContext";
+import { metrics } from "../utils/constantValue";
 Chart.register(...registerables);
 
-interface ImpressionsData {
-  date: string;
-  totalImpressions: number;
-  subParameters: {
-    deviceTypes: {
-      Desktop: number;
-      Mobile: number;
-      Tablet: number;
-    };
-  };
-}
-const MetricChart = ({selectedMetrics }: {selectedMetrics:string}) => {
+const MetricChart = ({
+  selectedMetrics,
+  selectDate,
+  apply,
+}: {
+  selectedMetrics: string;
+  selectDate: { from: string; to: string };
+  apply: boolean;
+}) => {
+  const { removeMetric } = useSelectedMetrics();
   const [byChartType, setByChartType] = useState<
-    "Total Impressions" | "Device Breakdown"
-  >("Total Impressions");
+    "Total" | "Device Breakdown"
+  >("Total");
   const [chartType, setChartType] = useState<ChartType>("bar");
   const [color, setColor] = useState([]);
   const chartRef = useRef<Chart | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  const deleteAddedMatric = (item: string) => {
+    removeMetric(item);
+  };
+
   const fetchImpressionsData = async () => {
-    const response = await fetch(`/data/${selectedMetrics}.json`); // Fetch from the public directory
+    const response = await fetch(`/data/CTR.json`); // Fetch from the public directory
     const data: any = await response.json();
-    const labels = data?.data?.map((item: any) => item.date);
-    const totalImpressionsData = data?.data?.map(
-      (item: any) => item?.[selectedMetrics]
-    );
-    const desktopData = data?.data?.map(
-      (item: any) => item.subParameters.deviceTypes.Desktop
-    );
-    const mobileData = data?.data?.map(
-      (item: any) => item.subParameters.deviceTypes.Mobile
-    );
-    const tabletData = data?.data?.map(
-      (item: any) => item.subParameters.deviceTypes.Tablet
-    );
+    let filteredData = data;
+
+    if (selectDate.from && selectDate.to) {
+      const fromDate = new Date(selectDate.from);
+      const toDate = new Date(selectDate.to);
+    
+      filteredData = data.filter((item: any) => {
+        const itemDate = new Date(item.date);
+        return itemDate >= fromDate && itemDate <= toDate;
+      });
+    }
+    const labels = filteredData?.map((item: any) => item.date);
+    let totalImpressionsData,
+      desktopData,
+      mobileData,
+      tabletData = [];
+    if (selectedMetrics === metrics[0]) {
+      totalImpressionsData = filteredData?.map(
+        (item: any) => item?.total.impressions
+      );
+      desktopData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.desktop?.impressions
+      );
+      mobileData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.mobile?.impressions
+      );
+      tabletData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.tablet?.impressions
+      );
+    }
+    if (selectedMetrics === metrics[1]) {
+      totalImpressionsData = filteredData?.map(
+        (item: any) => item?.total?.CTR
+      );
+      desktopData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.desktop?.CTR
+      );
+      mobileData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.mobile?.CTR
+      );
+      tabletData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.tablet?.CTR
+      );
+    }
+    if (selectedMetrics === metrics[2]) {
+      totalImpressionsData = filteredData?.map(
+        (item: any) => item?.total?.CPA
+      );
+      desktopData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.desktop?.CPA
+      );
+      mobileData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.mobile?.CPA
+      );
+      tabletData = filteredData?.map(
+        (item: any) => item.deviceBreakdown.tablet?.CPA
+      );
+    }
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
       if (ctx) {
         let chartData = {} as any;
-        if (byChartType === "Total Impressions") {
+        if (byChartType === "Total") {
           chartData = {
             labels: labels,
             datasets: [
               {
-                label: "Total Impressions",
+                label: "Total",
                 data: totalImpressionsData,
                 borderColor: color[1],
                 backgroundColor: color[0],
@@ -102,28 +151,18 @@ const MetricChart = ({selectedMetrics }: {selectedMetrics:string}) => {
   };
   useEffect(() => {
     if (selectedMetrics) fetchImpressionsData();
-    else{ if (chartRef.current) {
-      chartRef.current.destroy();
-    }}
-    // if (selectedMetrics === "CTR") fetchCTRData();
-    // else{ if (chartRef.current) {
-    //   chartRef.current.destroy();
-    // }}
-    // if (selectedMetrics === "CPA") fetchCPAData();
-    // else{ if (chartRef.current) {
-    //   chartRef.current.destroy();
-    // }}
-    // if (selectedMetrics === "Conversions") fetchConversionsData();
-    // else{ if (chartRef.current) {
-    //   chartRef.current.destroy();
-    // }}
-  }, [byChartType, selectedMetrics, chartType, color]);
-
+    else {
+      if (chartRef.current) {
+        chartRef.current.destroy();
+      }
+    }
+  }, [byChartType, selectedMetrics, chartType, color, apply]);
   return (
     <div className="mt-8">
+      <h2 className="text-xl text-lime-500 text-left mb-4">{selectedMetrics}</h2>
       <div className="flex">
-      <div className="flex w-[300px] items-center justify-between">
-          <label htmlFor="chartType" className="mr-1 whitespace-nowrap text-xs">
+        <div className="flex  min-w-[220px] items-center justify-between">
+          <label htmlFor="chartType" className="mr-1 whitespace-nowrap text-xs text-gray-500 ">
             Chart Type:
           </label>
           <CustomeDropdown
@@ -135,7 +174,10 @@ const MetricChart = ({selectedMetrics }: {selectedMetrics:string}) => {
           />
         </div>
         <div className="flex w-[300px] items-center">
-          <label htmlFor="chartType" className="ml-2 mr-1  whitespace-nowrap text-xs">
+          <label
+            htmlFor="color"
+            className="ml-2 mr-1  whitespace-nowrap text-xs text-gray-500 "
+          >
             By Chart Type:
           </label>
           <CustomeDropdown
@@ -147,13 +189,17 @@ const MetricChart = ({selectedMetrics }: {selectedMetrics:string}) => {
           />
         </div>
         <div className="flex w-[400px] items-center">
-          <label htmlFor="chartType" className="ml-2 mr-1  whitespace-nowrap text-xs">
+          <label
+            htmlFor="color"
+            className="ml-2 mr-1  whitespace-nowrap text-xs text-gray-500 "
+          >
             Select Color:
           </label>
           <ColorDropdown setColor={setColor} />
         </div>
-      </div>
 
+       
+      </div>
 
       <canvas ref={canvasRef} />
     </div>

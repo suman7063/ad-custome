@@ -1,335 +1,872 @@
-{
-  "graphTitle": "Ad Campaign Impressions",
-  "data": [
-    {
-      "date": "2024-06-01",
-      "CTR": 14000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 6000,
-          "Mobile": 7000,
-          "Tablet": 1000
-        }
+[
+  {
+    "date": "2024-07-01",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 12000,
+        "clicks": 1500,
+        "CTR": "35",
+        "CPA": 12.5
+      },
+      "mobile": {
+        "impressions": 18000,
+        "clicks": 2700,
+        "CTR": "45",
+        "CPA": 10.8
+      },
+      "tablet": {
+        "impressions": 5000,
+        "clicks": 625,
+        "CTR": "25",
+        "CPA": 15.0
       }
     },
-    {
-      "date": "2024-06-02",
-      "CTR": 15000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 6500,
-          "Mobile": 7500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-03",
-      "CTR": 16000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 7000,
-          "Mobile": 8000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-04",
-      "CTR": 17000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 7500,
-          "Mobile": 8500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-05",
-      "CTR": 18000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 8000,
-          "Mobile": 9000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-06",
-      "CTR": 19000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 8500,
-          "Mobile": 9500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-07",
-      "CTR": 20000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 9000,
-          "Mobile": 10000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-08",
-      "CTR": 21000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 9500,
-          "Mobile": 10500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-09",
-      "CTR": 22000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 10000,
-          "Mobile": 11000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-10",
-      "CTR": 23000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 10500,
-          "Mobile": 11500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-11",
-      "CTR": 24000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 11000,
-          "Mobile": 12000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-12",
-      "CTR": 25000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 11500,
-          "Mobile": 12500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-13",
-      "CTR": 26000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 12000,
-          "Mobile": 13000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-14",
-      "CTR": 27000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 12500,
-          "Mobile": 13500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-15",
-      "CTR": 28000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 13000,
-          "Mobile": 14000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-16",
-      "CTR": 29000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 13500,
-          "Mobile": 14500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-17",
-      "CTR": 30000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 14000,
-          "Mobile": 15000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-18",
-      "CTR": 31000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 14500,
-          "Mobile": 15500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-19",
-      "CTR": 32000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 15000,
-          "Mobile": 16000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-20",
-      "CTR": 33000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 15500,
-          "Mobile": 16500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-21",
-      "CTR": 34000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 16000,
-          "Mobile": 17000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-22",
-      "CTR": 35000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 16500,
-          "Mobile": 17500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-23",
-      "CTR": 36000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 17000,
-          "Mobile": 18000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-24",
-      "CTR": 37000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 17500,
-          "Mobile": 18500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-25",
-      "CTR": 38000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 18000,
-          "Mobile": 19000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-26",
-      "CTR": 39000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 18500,
-          "Mobile": 19500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-27",
-      "CTR": 40000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 19000,
-          "Mobile": 20000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-28",
-      "CTR": 41000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 19500,
-          "Mobile": 20500,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-29",
-      "CTR": 42000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 20000,
-          "Mobile": 21000,
-          "Tablet": 1000
-        }
-      }
-    },
-    {
-      "date": "2024-06-30",
-      "CTR": 43000,
-      "subParameters": {
-        "deviceTypes": {
-          "Desktop": 20500,
-          "Mobile": 21500,
-          "Tablet": 1000
-        }
-      }
+    "total": {
+      "impressions": 35000,
+      "clicks": 4825,
+      "CTR": "38.79",
+      "CPA": 13.1
     }
-  ]
-}
+  },
+  {
+    "date": "2024-07-02",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 13000,
+        "clicks": 1450,
+        "CTR": "28",
+        "CPA": 14.1
+      },
+      "mobile": {
+        "impressions": 20000,
+        "clicks": 2500,
+        "CTR": "30",
+        "CPA": 12.2
+      },
+      "tablet": {
+        "impressions": 6000,
+        "clicks": 720,
+        "CTR": "24",
+        "CPA": 16.3
+      }
+    },
+    "total": {
+      "impressions": 39000,
+      "clicks": 4670,
+      "CTR": "31.97",
+      "CPA": 14.2
+    }
+  },
+  {
+    "date": "2024-07-03",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 10000,
+        "clicks": 1200,
+        "CTR": "20",
+        "CPA": 13.7
+      },
+      "mobile": {
+        "impressions": 16000,
+        "clicks": 2600,
+        "CTR": "32.5",
+        "CPA": 9.5
+      },
+      "tablet": {
+        "impressions": 4500,
+        "clicks": 575,
+        "CTR": "25.78",
+        "CPA": 17.0
+      }
+    },
+    "total": {
+      "impressions": 30500,
+      "clicks": 4375,
+      "CTR": "44.34",
+      "CPA": 11.2
+    }
+  },
+  {
+    "date": "2024-07-07",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 15000,
+        "clicks": 1700,
+        "CTR": "31.33",
+        "CPA": 12.2
+      },
+      "mobile": {
+        "impressions": 22000,
+        "clicks": 3300,
+        "CTR": "35",
+        "CPA": 10.7
+      },
+      "tablet": {
+        "impressions": 7000,
+        "clicks": 910,
+        "CTR": "26",
+        "CPA": 15.1
+      }
+    },
+    "total": {
+      "impressions": 44000,
+      "clicks": 5910,
+      "CTR": "33.43",
+      "CPA": 13.7
+    }
+  },
+  {
+    "date": "2024-07-05",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 9000,
+        "clicks": 1350,
+        "CTR": "45",
+        "CPA": 11.0
+      },
+      "mobile": {
+        "impressions": 14000,
+        "clicks": 2100,
+        "CTR": "35",
+        "CPA": 10.6
+      },
+      "tablet": {
+        "impressions": 3500,
+        "clicks": 455,
+        "CTR": "39",
+        "CPA": 14.8
+      }
+    },
+    "total": {
+      "impressions": 26500,
+      "clicks": 3905,
+      "CTR": "54.74",
+      "CPA": 12.1
+    }
+  },
+  {
+    "date": "2024-07-07",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 16000,
+        "clicks": 1800,
+        "CTR": "31.25",
+        "CPA": 15.5
+      },
+      "mobile": {
+        "impressions": 23000,
+        "clicks": 3450,
+        "CTR": "45",
+        "CPA": 11.9
+      },
+      "tablet": {
+        "impressions": 8000,
+        "clicks": 1025,
+        "CTR": "32.81",
+        "CPA": 16.4
+      }
+    },
+    "total": {
+      "impressions": 47000,
+      "clicks": 6275,
+      "CTR": "43.35",
+      "CPA": 14.9
+    }
+  },
+  {
+    "date": "2024-07-07",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 14000,
+        "clicks": 1300,
+        "CTR": "29.29",
+        "CPA": 18.2
+      },
+      "mobile": {
+        "impressions": 25000,
+        "clicks": 3750,
+        "CTR": "30",
+        "CPA": 12.1
+      },
+      "tablet": {
+        "impressions": 7500,
+        "clicks": 950,
+        "CTR": "32.67",
+        "CPA": 15.6
+      }
+    },
+    "total": {
+      "impressions": 46500,
+      "clicks": 6000,
+      "CTR": "42.9",
+      "CPA": 16.3
+    }
+  },
+  {
+    "date": "2024-07-08",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 17000,
+        "clicks": 2000,
+        "CTR": "31.76",
+        "CPA": 15.4
+      },
+      "mobile": {
+        "impressions": 28000,
+        "clicks": 4100,
+        "CTR": "34.64",
+        "CPA": 11.8
+      },
+      "tablet": {
+        "impressions": 8500,
+        "clicks": 1100,
+        "CTR": "32.94",
+        "CPA": 14.2
+      }
+    },
+    "total": {
+      "impressions": 53500,
+      "clicks": 7200,
+      "CTR": "43.46",
+      "CPA": 13.8
+    }
+  },
+  {
+    "date": "2024-07-09",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 13000,
+        "clicks": 1400,
+        "CTR": "30.77",
+        "CPA": 15.3
+      },
+      "mobile": {
+        "impressions": 24000,
+        "clicks": 3600,
+        "CTR": "35",
+        "CPA": 12.0
+      },
+      "tablet": {
+        "impressions": 7500,
+        "clicks": 950,
+        "CTR": "32.67",
+        "CPA": 15.5
+      }
+    },
+    "total": {
+      "impressions": 44500,
+      "clicks": 5950,
+      "CTR": "43.37",
+      "CPA": 14.9
+    }
+  },
+  {
+    "date": "2024-07-10",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 9000,
+        "clicks": 1250,
+        "CTR": "33.89",
+        "CPA": 14.8
+      },
+      "mobile": {
+        "impressions": 15000,
+        "clicks": 2250,
+        "CTR": "35",
+        "CPA": 11.7
+      },
+      "tablet": {
+        "impressions": 4000,
+        "clicks": 520,
+        "CTR": "33",
+        "CPA": 14.9
+      }
+    },
+    "total": {
+      "impressions": 28000,
+      "clicks": 4020,
+      "CTR": "34.36",
+      "CPA": 14.4
+    }
+  },
+  {
+    "date": "2024-07-11",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 10000,
+        "clicks": 1350,
+        "CTR": "33.5",
+        "CPA": 14.9
+      },
+      "mobile": {
+        "impressions": 17000,
+        "clicks": 2550,
+        "CTR": "35",
+        "CPA": 11.8
+      },
+      "tablet": {
+        "impressions": 5000,
+        "clicks": 625,
+        "CTR": "32.5",
+        "CPA": 15.1
+      }
+    },
+    "total": {
+      "impressions": 32000,
+      "clicks": 4525,
+      "CTR": "34.14",
+      "CPA": 14.6
+    }
+  },
+  {
+    "date": "2024-07-12",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 11000,
+        "clicks": 1400,
+        "CTR": "32.73",
+        "CPA": 15.0
+      },
+      "mobile": {
+        "impressions": 16000,
+        "clicks": 2400,
+        "CTR": "35",
+        "CPA": 12.1
+      },
+      "tablet": {
+        "impressions": 5500,
+        "clicks": 720,
+        "CTR": "33.09",
+        "CPA": 15.2
+      }
+    },
+    "total": {
+      "impressions": 32000,
+      "clicks": 4525,
+      "CTR": "34.14",
+      "CPA": 14.6
+    }
+  },
+  {
+    "date": "2024-07-13",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 12000,
+        "clicks": 1500,
+        "CTR": "35",
+        "CPA": 12.5
+      },
+      "mobile": {
+        "impressions": 18000,
+        "clicks": 2700,
+        "CTR": "45",
+        "CPA": 10.8
+      },
+      "tablet": {
+        "impressions": 5000,
+        "clicks": 625,
+        "CTR": "25",
+        "CPA": 15.0
+      }
+    },
+    "total": {
+      "impressions": 35000,
+      "clicks": 4825,
+      "CTR": "38.79",
+      "CPA": 13.1
+    }
+  },
+  {
+    "date": "2024-07-14",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 13000,
+        "clicks": 1450,
+        "CTR": "28",
+        "CPA": 14.1
+      },
+      "mobile": {
+        "impressions": 20000,
+        "clicks": 2500,
+        "CTR": "30",
+        "CPA": 12.2
+      },
+      "tablet": {
+        "impressions": 6000,
+        "clicks": 720,
+        "CTR": "24",
+        "CPA": 16.3
+      }
+    },
+    "total": {
+      "impressions": 39000,
+      "clicks": 4670,
+      "CTR": "31.97",
+      "CPA": 14.2
+    }
+  },
+  {
+    "date": "2024-07-15",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 10000,
+        "clicks": 1200,
+        "CTR": "20",
+        "CPA": 13.7
+      },
+      "mobile": {
+        "impressions": 16000,
+        "clicks": 2600,
+        "CTR": "32.5",
+        "CPA": 9.5
+      },
+      "tablet": {
+        "impressions": 4500,
+        "clicks": 575,
+        "CTR": "25.78",
+        "CPA": 17.0
+      }
+    },
+    "total": {
+      "impressions": 30500,
+      "clicks": 4375,
+      "CTR": "44.34",
+      "CPA": 11.2
+    }
+  },
+  {
+    "date": "2024-07-16",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 15000,
+        "clicks": 1700,
+        "CTR": "31.33",
+        "CPA": 12.2
+      },
+      "mobile": {
+        "impressions": 22000,
+        "clicks": 3300,
+        "CTR": "35",
+        "CPA": 10.7
+      },
+      "tablet": {
+        "impressions": 7000,
+        "clicks": 910,
+        "CTR": "26",
+        "CPA": 15.1
+      }
+    },
+    "total": {
+      "impressions": 44000,
+      "clicks": 5910,
+      "CTR": "33.43",
+      "CPA": 13.7
+    }
+  },
+  {
+    "date": "2024-07-17",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 9000,
+        "clicks": 1350,
+        "CTR": "45",
+        "CPA": 11.0
+      },
+      "mobile": {
+        "impressions": 14000,
+        "clicks": 2100,
+        "CTR": "35",
+        "CPA": 10.6
+      },
+      "tablet": {
+        "impressions": 3500,
+        "clicks": 455,
+        "CTR": "39",
+        "CPA": 14.8
+      }
+    },
+    "total": {
+      "impressions": 26500,
+      "clicks": 3905,
+      "CTR": "54.74",
+      "CPA": 12.1
+    }
+  },
+  {
+    "date": "2024-07-18",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 16000,
+        "clicks": 1800,
+        "CTR": "31.25",
+        "CPA": 15.5
+      },
+      "mobile": {
+        "impressions": 23000,
+        "clicks": 3450,
+        "CTR": "45",
+        "CPA": 11.9
+      },
+      "tablet": {
+        "impressions": 8000,
+        "clicks": 1025,
+        "CTR": "32.81",
+        "CPA": 16.4
+      }
+    },
+    "total": {
+      "impressions": 47000,
+      "clicks": 6275,
+      "CTR": "43.35",
+      "CPA": 14.9
+    }
+  },
+  {
+    "date": "2024-07-19",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 14000,
+        "clicks": 1300,
+        "CTR": "29.29",
+        "CPA": 18.2
+      },
+      "mobile": {
+        "impressions": 25000,
+        "clicks": 3750,
+        "CTR": "30",
+        "CPA": 12.1
+      },
+      "tablet": {
+        "impressions": 7500,
+        "clicks": 950,
+        "CTR": "32.67",
+        "CPA": 15.6
+      }
+    },
+    "total": {
+      "impressions": 46500,
+      "clicks": 6000,
+      "CTR": "42.9",
+      "CPA": 16.3
+    }
+  },
+  {
+    "date": "2024-07-20",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 17000,
+        "clicks": 2000,
+        "CTR": "31.76",
+        "CPA": 15.4
+      },
+      "mobile": {
+        "impressions": 28000,
+        "clicks": 4100,
+        "CTR": "34.64",
+        "CPA": 11.8
+      },
+      "tablet": {
+        "impressions": 8500,
+        "clicks": 1100,
+        "CTR": "32.94",
+        "CPA": 14.2
+      }
+    },
+    "total": {
+      "impressions": 53500,
+      "clicks": 7200,
+      "CTR": "43.46",
+      "CPA": 13.8
+    }
+  },
+  {
+    "date": "2024-07-21",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 13000,
+        "clicks": 1400,
+        "CTR": "30.77",
+        "CPA": 15.3
+      },
+      "mobile": {
+        "impressions": 24000,
+        "clicks": 3600,
+        "CTR": "35",
+        "CPA": 12.0
+      },
+      "tablet": {
+        "impressions": 7500,
+        "clicks": 950,
+        "CTR": "32.67",
+        "CPA": 15.5
+      }
+    },
+    "total": {
+      "impressions": 44500,
+      "clicks": 5950,
+      "CTR": "43.37",
+      "CPA": 14.9
+    }
+  },
+  {
+    "date": "2024-07-22",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 9000,
+        "clicks": 1250,
+        "CTR": "33.89",
+        "CPA": 14.8
+      },
+      "mobile": {
+        "impressions": 15000,
+        "clicks": 2250,
+        "CTR": "35",
+        "CPA": 11.7
+      },
+      "tablet": {
+        "impressions": 4000,
+        "clicks": 520,
+        "CTR": "33",
+        "CPA": 14.9
+      }
+    },
+    "total": {
+      "impressions": 28000,
+      "clicks": 4020,
+      "CTR": "34.36",
+      "CPA": 14.4
+    }
+  },
+  {
+    "date": "2024-07-23",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 10000,
+        "clicks": 1350,
+        "CTR": "33.5",
+        "CPA": 14.9
+      },
+      "mobile": {
+        "impressions": 17000,
+        "clicks": 2550,
+        "CTR": "35",
+        "CPA": 11.8
+      },
+      "tablet": {
+        "impressions": 5000,
+        "clicks": 625,
+        "CTR": "32.5",
+        "CPA": 15.1
+      }
+    },
+    "total": {
+      "impressions": 32000,
+      "clicks": 4525,
+      "CTR": "34.14",
+      "CPA": 14.6
+    }
+  },
+  {
+    "date": "2024-07-24",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 11000,
+        "clicks": 1400,
+        "CTR": "32.73",
+        "CPA": 15.0
+      },
+      "mobile": {
+        "impressions": 16000,
+        "clicks": 2400,
+        "CTR": "35",
+        "CPA": 12.1
+      },
+      "tablet": {
+        "impressions": 5500,
+        "clicks": 720,
+        "CTR": "33.09",
+        "CPA": 15.2
+      }
+    },
+    "total": {
+      "impressions": 32500,
+      "clicks": 4525,
+      "CTR": "34.14",
+      "CPA": 14.6
+    }
+  },
+  {
+    "date": "2024-07-25",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 12000,
+        "clicks": 1500,
+        "CTR": "35",
+        "CPA": 12.5
+      },
+      "mobile": {
+        "impressions": 18000,
+        "clicks": 2700,
+        "CTR": "45",
+        "CPA": 10.8
+      },
+      "tablet": {
+        "impressions": 5000,
+        "clicks": 625,
+        "CTR": "25",
+        "CPA": 15.0
+      }
+    },
+    "total": {
+      "impressions": 35000,
+      "clicks": 4825,
+      "CTR": "38.79",
+      "CPA": 13.1
+    }
+  },
+  {
+    "date": "2024-07-26",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 13000,
+        "clicks": 1450,
+        "CTR": "28",
+        "CPA": 14.1
+      },
+      "mobile": {
+        "impressions": 20000,
+        "clicks": 2500,
+        "CTR": "30",
+        "CPA": 12.2
+      },
+      "tablet": {
+        "impressions": 6000,
+        "clicks": 720,
+        "CTR": "24",
+        "CPA": 16.3
+      }
+    },
+    "total": {
+      "impressions": 39000,
+      "clicks": 4670,
+      "CTR": "31.97",
+      "CPA": 14.2
+    }
+  },
+  {
+    "date": "2024-07-27",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 10000,
+        "clicks": 1200,
+        "CTR": "20",
+        "CPA": 13.7
+      },
+      "mobile": {
+        "impressions": 16000,
+        "clicks": 2600,
+        "CTR": "32.5",
+        "CPA": 9.5
+      },
+      "tablet": {
+        "impressions": 4500,
+        "clicks": 575,
+        "CTR": "25.78",
+        "CPA": 17.0
+      }
+    },
+    "total": {
+      "impressions": 30500,
+      "clicks": 4375,
+      "CTR": "44.34",
+      "CPA": 11.2
+    }
+  },
+  {
+    "date": "2024-07-28",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 15000,
+        "clicks": 1700,
+        "CTR": "31.33",
+        "CPA": 12.2
+      },
+      "mobile": {
+        "impressions": 22000,
+        "clicks": 3300,
+        "CTR": "35",
+        "CPA": 10.7
+      },
+      "tablet": {
+        "impressions": 7000,
+        "clicks": 910,
+        "CTR": "26",
+        "CPA": 15.1
+      }
+    },
+    "total": {
+      "impressions": 44000,
+      "clicks": 5910,
+      "CTR": "33.43",
+      "CPA": 13.7
+    }
+  },
+  {
+    "date": "2024-07-29",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 9000,
+        "clicks": 1350,
+        "CTR": "45",
+        "CPA": 11.0
+      },
+      "mobile": {
+        "impressions": 14000,
+        "clicks": 2100,
+        "CTR": "35",
+        "CPA": 10.6
+      },
+      "tablet": {
+        "impressions": 3500,
+        "clicks": 455,
+        "CTR": "39",
+        "CPA": 14.8
+      }
+    },
+    "total": {
+      "impressions": 26500,
+      "clicks": 3905,
+      "CTR": "54.74",
+      "CPA": 12.1
+    }
+  },
+  {
+    "date": "2024-07-30",
+    "deviceBreakdown": {
+      "desktop": {
+        "impressions": 16000,
+        "clicks": 1800,
+        "CTR": "31.25",
+        "CPA": 15.5
+      },
+      "mobile": {
+        "impressions": 23000,
+        "clicks": 3450,
+        "CTR": "45",
+        "CPA": 11.9
+      },
+      "tablet": {
+        "impressions": 8000,
+        "clicks": 1025,
+        "CTR": "32.81",
+        "CPA": 16.4
+      }
+    },
+    "total": {
+      "impressions": 47000,
+      "clicks": 6275,
+      "CTR": "43.35",
+      "CPA": 14.9
+    }
+  }
+]

@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import {
-  SelectedMetricsProvider,
-  useSelectedMetrics,
-} from "../contextApi/SelectedMetricsContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

@@ -52,7 +52,7 @@ const CustomeDropdown = ({
               return (
                 <li
                   key={item?.id}
-                  className="rounded text-sm p-2 hover:bg-gradient-to-br from-[#5e42a6] via-[#b74e91] to-[#b74e91] dark:hover:text-white cursor-pointer text-black"
+                  className="rounded text-sm p-2 hover:bg-gradient-to-br from-[#5e42a6] via-[#b74e91] to-[#b74e91] dark:hover:text-white cursor-pointer text-black text-left"
                   onClick={() => handleItemClick(item.id, item.category)}
                 >
                   {item?.category}
