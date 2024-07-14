@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-
+import Image from 'next/image'
 const CustomeDropdown = ({
   option,
   selectedCategory,
@@ -43,7 +43,7 @@ const CustomeDropdown = ({
         onClick={() => setOpenMenu(!openMenu)}
       >
         {selectedCategory}
-        <img src="/assets/dropdown.svg" alt="dropDown" className="w-8" />
+        <Image src="/assets/dropdown.svg" alt="dropDown" width={12} height={12} />
       </div>
       {openMenu && (
         <div className="bg-white rounded shadow-[0_3px_10px_rgb(0,0,0,0.2)] absolute w-full p-2 mt-2">

@@ -42,8 +42,8 @@ const DropArea = ({ onDrop,selectDate,apply }: DropAreaProps) => {
       {isOver ? <div className="text-xs text-lime-500">Release to drop</div> : <div className="text-[#b74e91]">Drag a metric here</div>}
       </div>
       
-       {selectedMetrics.map((item)=>{return( <div className="mt-4">
-        <MetricChart selectedMetrics={item} selectDate={selectDate} apply={apply}/>
+       {selectedMetrics.map((item)=>{return( <div className="mt-4" key={item}>
+        <MetricChart selectedMetrics={item} selectDate={selectDate} apply={apply} />
       </div>)})}
     </div>
   );
